@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0068vrw142s2"]
+
+[ext_resource type="Script" path="res://scenes/player/player_controller.gd" id="1_07bjn"]
+[ext_resource type="PackedScene" uid="uid://bwkgi5ih3c05f" path="res://assets/models/Jelly/Jelly_V1.blend" id="2_05roo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3vn71"]
+height = 1.81888
+radius = 0.33868
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_07bjn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.016519, 0)
+shape = SubResource("CylinderShape3D_3vn71")
+
+[node name="Jerry" type="Node3D" parent="."]
+
+[node name="Jelly_V1" parent="Jerry" instance=ExtResource("2_05roo")]
+
+[node name="CameraAttach" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -0.40558, 0.579228, 0, 0.819152, 0.573576, -0.707107, -0.40558, 0.579228, 5, 5, 5)

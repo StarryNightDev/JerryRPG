@@ -57,7 +57,7 @@ layers = 2
 use_collision = true
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.993258, 0.115925, 0, -0.115925, -0.993258, 1.99157, 9.78125, -4.48814)
+transform = Transform3D(1, 0, 0, 0, -0.568031, 0.823007, 0, -0.823007, -0.568031, 1.99157, 9.78125, -4.48814)
 shadow_enabled = true
 
 [node name="Enivroment" type="WorldEnvironment" parent="."]
