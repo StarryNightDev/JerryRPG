@@ -49,7 +49,7 @@ expand_margin_bottom = 2.0
 
 [resource]
 default_font = ExtResource("1_nhajn")
-default_font_size = 16
+default_font_size = 32
 Button/colors/font_focus_color = Color(0.25098, 0.384314, 0.592157, 1)
 Button/colors/font_hover_color = Color(0.721569, 0.831373, 1, 1)
 Button/colors/font_pressed_color = Color(0.207843, 0.266667, 0.380392, 1)

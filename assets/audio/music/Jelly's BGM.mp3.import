@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2mknlapphjmo"
+path="res://.godot/imported/Jelly's BGM.mp3-1242b0c0b5c1ad60ac1949b72ef208f5.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/music/Jelly's BGM.mp3"
+dest_files=["res://.godot/imported/Jelly's BGM.mp3-1242b0c0b5c1ad60ac1949b72ef208f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

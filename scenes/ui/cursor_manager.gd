@@ -23,4 +23,4 @@ func update_cursor():
 		var scaler = cursor_texture.get_size() * (scale_multiple + 1)
 		image.resize(scaler.x, scaler.y, Image.INTERPOLATE_NEAREST)
 		var texture = ImageTexture.create_from_image(image)
-		Input.set_custom_mouse_cursor(texture, Input.CURSOR_ARROW, scaler * .5)
+		#Input.set_custom_mouse_cursor(texture, Input.CURSOR_ARROW, scaler * .5)

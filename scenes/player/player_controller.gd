@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-const SPRINT_SPEED = 8.0
+const SPEED = 3.0
+const SPRINT_SPEED = 6.0
 const JUMP_VELOCITY = 4.5
 
 const IDLE_ANIMATION = 'jelly idle'
@@ -24,10 +24,10 @@ func _ready() -> void:
 	animation_player.set_blend_time(WALK_ANIMATION, IDLE_ANIMATION, 0.2)
 	animation_player.set_blend_time(RUN_ANIMATION, WALK_ANIMATION, 0.2)
 	animation_player.set_blend_time(RUN_ANIMATION, IDLE_ANIMATION, 0.2)
+	animation_player.set_blend_time(IDLE_ANIMATION, RUN_ANIMATION, 0.2)
+	animation_player.set_blend_time(WALK_ANIMATION, RUN_ANIMATION, 0.2)
 	
 	animation_player.set_blend_time(JUMP_ANIMATION, IDLE_ANIMATION, 0.2)
-	animation_player.set_blend_time(JUMP_ANIMATION, WALK_ANIMATION, 0.2)
-	animation_player.set_blend_time(WALK_ANIMATION, JUMP_ANIMATION, 0.2)
 	animation_player.set_blend_time(IDLE_ANIMATION, JUMP_ANIMATION, 0.2)
 	
 

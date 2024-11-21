@@ -1,8 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://ossrp4y0wtt2"]
+[gd_scene load_steps=9 format=3 uid="uid://ossrp4y0wtt2"]
 
 [ext_resource type="Theme" uid="uid://65dakj0ukuj6" path="res://assets/themes/default_theme.tres" id="1_hgrl0"]
 [ext_resource type="Script" path="res://scenes/ui/menus/main_menu.gd" id="2_kc8p2"]
-[ext_resource type="Texture2D" uid="uid://chxdy4cn6xmt3" path="res://assets/sprites/walls.png" id="3_0rlcu"]
+[ext_resource type="Texture2D" uid="uid://clypr660kvmsv" path="res://assets/textures/main-menu-bg.jpg" id="3_3nyqa"]
+[ext_resource type="Texture2D" uid="uid://bea7h6xhwa04c" path="res://assets/textures/jelly.png" id="4_otojw"]
+[ext_resource type="FontFile" uid="uid://rgds3dh4mgiu" path="res://assets/fonts/fot-yuruka-std.ttf" id="4_putt2"]
+[ext_resource type="Script" path="res://scenes/ui/menus/jelly_awawa.gd" id="5_wfo4p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2ubar"]
+font_size = 72
+outline_size = 24
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ofbb5"]
+default_base_scale = 2.0
+default_font = ExtResource("4_putt2")
+default_font_size = 44
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -19,55 +32,75 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -75.0
+offset_right = 1852.0
+offset_bottom = 1245.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_0rlcu")
+scale = Vector2(0.550847, 0.537055)
+texture = ExtResource("3_3nyqa")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 31.0
+offset_top = 32.0
+offset_right = 1887.0
+offset_bottom = 538.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "Jerry RPG"
+label_settings = SubResource("LabelSettings_2ubar")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Jelly_Icon" type="TextureRect" parent="."]
+texture_filter = 4
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 223.0
+offset_top = 436.0
+offset_right = -697.0
+offset_bottom = 603.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 32
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 32
+rotation = 0.121311
+scale = Vector2(0.613216, 0.635001)
+texture = ExtResource("4_otojw")
+stretch_mode = 2
+script = ExtResource("5_wfo4p")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="StartGameButton" type="Button" parent="."]
 layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-text = "Jerry RPG"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ButtonsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 10
-
-[node name="StartGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
-layout_mode = 2
+offset_left = 828.0
+offset_top = 377.0
+offset_right = 1098.0
+offset_bottom = 422.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_top = NodePath("../QuitGameButton")
 focus_previous = NodePath("../QuitGameButton")
-text = "awawawawa"
+theme = SubResource("Theme_ofbb5")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+text = "New Game"
 
-[node name="QuitGameButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonsVBox"]
+[node name="QuitGameButton" type="Button" parent="."]
 layout_mode = 2
+offset_left = 924.0
+offset_top = 451.0
+offset_right = 995.0
+offset_bottom = 484.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 focus_neighbor_bottom = NodePath("../StartGameButton")
 focus_next = NodePath("../StartGameButton")
+theme = ExtResource("1_hgrl0")
+theme_override_constants/outline_size = 24
 text = "Exit"
 
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/StartGameButton" to="." method="_on_start_game_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/ButtonsVBox/QuitGameButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="QuitGameButton" to="." method="_on_quit_button_pressed"]

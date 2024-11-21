@@ -166,7 +166,7 @@ libraries = {
 
 [node name="CursorManger" type="Node" parent="."]
 script = ExtResource("3_hbg7t")
-base_window_size = Vector2(960, 544)
+base_window_size = Vector2(1920, 1080)
 cursor_texture = ExtResource("4_mf07r")
 
 [connection signal="main_menu" from="Control/GameMenu" to="." method="_on_menu_main_menu"]

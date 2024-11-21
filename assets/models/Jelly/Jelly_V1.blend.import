@@ -31,7 +31,63 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"Jelly_V1_Circle_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 1,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+},
+"Jelly_V1_Cube_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 1,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:Armature/Skeleton3D": {
+"rest_pose/external_animation_library": null
+},
+"PATH:Armature/Skeleton3D/Body": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Cloth_1": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Gloves": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Hair": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Hair_Acc": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Lower_Clothes": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/NeckCollar": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/Stars": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/face": {
+"mesh_instance/layers": 3
+},
+"PATH:Armature/Skeleton3D/shoes": {
+"mesh_instance/layers": 3
+}
+}
+}
 blender/nodes/visible=0
 blender/nodes/active_collection_only=false
 blender/nodes/punctual_lights=true

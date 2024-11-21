@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_mwxwu")
 script = ExtResource("2_pgx83")
-action_items = Array[String](["move_forward", "move_backward", "move_left", "move_right", "jump", "interact"])
+action_items = Array[String](["move_forward", "move_backward", "move_left", "move_right", "jump", "interact", "sprint"])
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
